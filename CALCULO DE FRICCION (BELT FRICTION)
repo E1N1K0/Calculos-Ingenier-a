@@ -1,0 +1,30 @@
+#Calcula cualquier variable que falte, ingresandola como ''
+
+import numpy as np                  #Para pi y e
+import matplotlib.pyplot as plt     #Para graficar
+def belt_friction(T1, T2, mu, vueltas, decimales):
+    e = np.exp(1)      #e = 2.71828183
+    TT = np.pi         #pi = 3,1415 
+    try:
+        if T1 == '':
+            resultado = round(T2*(e**(mu*vueltas*(2*TT))),decimales)
+            print('La fuerza resultante, T1, en N, es de:')
+        elif T2 == '':
+            resultado = round(T1/(e**(mu*vueltas*(2*TT))),decimales)
+            print('La fuerza minima, T2, a aplicar, en N, es de:')
+        elif mu == '':
+            resultado = round((ma.log(T1/T2,e))/(vueltas*(2*TT)),decimales)
+            print('La rugosidad, mu, es de:')
+        elif vueltas == '':
+            resultado = round((ma.log(T1/T2,e))/(mu**(2*TT)),decimales)
+            print('Las vueltas requeridas para sostener el peso, es de:')
+    except:
+        return 'Error'
+    
+    return resultado
+
+#Ejecucion: hay que asignar todas las condiciones de borde y dejar la variable independiente en comillas
+#belt_friction('', 10, 0.662, 2.5, 3)   #Rpta = 80
+#belt_friction(800, '', 0.3, ((180-2*20)/360), 3)
+#belt_friction(1000, '', 0.2, 2, 3)
+belt_friction(500, '', 0.2, 2, 3)
