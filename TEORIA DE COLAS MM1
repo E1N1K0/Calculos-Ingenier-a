@@ -1,0 +1,38 @@
+#Clientes en una línea:
+#Supuestos: MM1: Distribucion de llegadas Poisson y del servicio exponencial. Un servidor.
+
+import numpy as np                          #Para pi y e
+import matplotlib.pyplot as plt             #Para graficar
+
+def colas(eje_x):
+    
+    #CONDICIONES DE BORDE:
+    ritmo_llegadas = 15                      #Se especifica aqui....(automatizar en la ejecución).
+    ritmo_servicio = 20                      #Se especifica aqui....(automatizar en la ejecución).   
+         
+    #si ritmo_llegadas > ritmo_servicio => 'El sistema no es capaz!'        
+    
+    #DEFINIR LA VARIABLE INDEPENDIENTE Y DEPENDIENTE:
+    ritmo_llegadas = eje_x                   #Se especifica aqui....(automatizar en la ejecución) (eje x)
+    eje_y = 2                                #Se especifica aqui....(automatizar en la ejecución) (eje y)
+    
+    #ECUACIONES:
+    utilizacion_servidor = ritmo_llegadas/ritmo_servicio
+    largo_linea = (ritmo_llegadas**2)/(ritmo_servicio*(ritmo_servicio-ritmo_llegadas))
+    numero_promedio_ensistema = ritmo_llegadas / (ritmo_servicio-ritmo_llegadas)
+    tiempo_espera_enlinea = largo_linea/ritmo_llegadas
+    
+    #ALTERNATIVA EJES:
+    alternativas_eje_y = {'1':utilizacion_servidor,
+                          '2':largo_linea,
+                          '3':numero_promedio_ensistema,
+                          '4':tiempo_espera_enlinea}
+    resultado = alternativas_eje_y[str(eje_y)] 
+    
+    return resultado                        #eleccion de la ecuacion a graficar (eje y)
+
+#EJECUCION
+eje_x=np.linspace(0.1,10,100)               #Automatizar parametros segun variable?????
+plt.plot(eje_x,colas(eje_x))   
+plt.xlabel('x = var_indep')                 #Como cambiar nombre automatico, segun la variable elegida???
+plt.ylabel('eje_y')
