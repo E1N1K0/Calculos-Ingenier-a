@@ -1,4 +1,4 @@
-#Clientes en una línea:
+#Clientes en una línea: Sensibilizacion.
 #Supuestos: MM1: Distribucion de llegadas Poisson y del servicio exponencial. Un servidor.
 
 import numpy as np                          #Para pi y e
