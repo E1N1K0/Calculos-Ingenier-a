@@ -13,5 +13,5 @@ Aplicacion de funciones a calculos básicos de ingenieria.
 
      
 ## Where users can get help with your project = Donde los usuarios pueden encontrar ayuda con el proyecto:
-   Pueden escribirme a e1n1k0programa@gmail.com<br><br>
+   Pueden escribirme a e1n1k0programa@gmail.com<br>
    You can contact me at e1n1k0programa@gmail.com
