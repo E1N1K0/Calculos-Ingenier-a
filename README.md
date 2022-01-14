@@ -2,15 +2,7 @@
 
 ### ABSTRACT = RESUMEN:
 Application of functions to basic engineering calculations.<br>
-
 Aplicacion de funciones a calculos básicos de ingenieria.
-
-
-## History = Historia:
-
-Mi propuesta de solucion a distintos problemas de libros.<br>
-
-My own proposal for solutions of severals book problems.
 
 
 ## INDEX = INDICE:
